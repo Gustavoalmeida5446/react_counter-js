@@ -13,11 +13,14 @@ export const App = () => {
   };
 
   const increase = () => {
+    // 1. Primeiro chamamos addOne
+    addOne();
+
+    // 2. O teste falhou porque 0 % 5 === 0 (deveria somar 100)
+    // Para seguir a ordem do mentor, checamos o valor ATUAL
     if (count % 5 === 0) {
       add100();
     }
-
-    addOne();
   };
 
   return (
